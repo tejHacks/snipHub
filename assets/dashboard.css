@@ -1,75 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-/* Scrollbar Styling */
-::-webkit-scrollbar { background: #272727; width: 12px; }
-::-webkit-scrollbar-thumb { background: #808080; border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background-color: #666; }
 
+    /* Purple Background & Center Content */
+    body.purple-bg {
+        background: linear-gradient(135deg, #5a189a, #9d4edd);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+    }
 
-body.hacker-theme {
-    background-color: black;
-    color: #00ff00;
-    font-family: 'Share Tech Mono', monospace;
-}
+    /* Form Container */
+    .auth-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
 
-.text-neon {
-    color: #00ff00;
-    text-shadow: 0px 0px 8px #00ff00;
-}
+    /* Floating Bubbles */
+    .bubble {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+        animation: float infinite linear;
+    }
 
-.username {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #00ff00;
-    text-shadow: 0px 0px 10px #00ff00;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #00ff00; /* Blinking cursor effect */
-    animation: blinkCursor 0.8s infinite;
-}
-
-@keyframes blinkCursor {
-    50% { border-right: 2px solid transparent; }
-}
-
-.navbar {
-    border-bottom: 2px solid #00ff00;
-}
-
-.btn-outline-neon {
-    color: #00ff00;
-    border: 1px solid #00ff00;
-}
-
-.btn-outline-neon:hover {
-    background-color: #00ff00;
-    color: black;
-}
-
-.terminal {
-    border: 2px solid #00ff00;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    text-align: left;
-    margin-top: 30px;
-}
-
-.terminal-text {
-    font-size: 1.2rem;
-    color: #00ff00;
-    animation: typing 1s steps(20, end);
-}
-
-.glitch-text {
-    font-size: 1.5rem;
-    color: #00ff00;
-    text-shadow: 0px 0px 8px #00ff00, 0px 0px 16px #00ff00;
-    animation: glitch 1.5s infinite alternate;
-}
-
-@keyframes glitch {
-    0% { text-shadow: 2px 2px 8px #00ff00; }
-    100% { text-shadow: -2px -2px 8px #00ff00; }
-}
-
-
+    @keyframes float {
+        0% { transform: translateY(0); opacity: 0.8; }
+        50% { transform: translateY(-20px); opacity: 0.5; }
+        100% { transform: translateY(0); opacity: 0.8; }
+    }
+    

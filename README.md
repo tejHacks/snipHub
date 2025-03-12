@@ -60,12 +60,28 @@ SnipHub is a **basic yet powerful** web app designed to store and manage code sn
 
 ---
 
+## Screenshots of the app
+![Login Page](assets/images/login.png)
+
+![Signup Page](assets/images/signup.png)
+
+![Dashboard Hacker Themed](assets/images/dashboard.png)
+
+![Add Snippets Hacker theme](assets/images/add_snippet.png)
+![Add Snippets Regular theme](assets/images/add_snippet_regular.png)
+
+ ![Dashboard Regular theme](assets/images/regular.png)
+
+
+
+
 ## 🔥 Future Enhancements
 - **Syntax Highlighting** for code snippets
 - **Tagging System** for better snippet organization
 - **Dark/Light Theme Toggle**
 - **Export/Import Snippets** as JSON or CSV
 - **API Support** to integrate with external apps
+- **Modular Hacker and Light Theme** switch between both themes and Implement Local storage in the app for theme switch
 
 ---
 

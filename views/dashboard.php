@@ -93,10 +93,10 @@ $snippets = $stmt->fetchAll(PDO::FETCH_ASSOC)
     <nav class="navbar navbar-dark bg-black px-3">
         <a class="navbar-brand text-neon" href="#">⚡ SnipHub</a>
         <div class="d-flex">
-            <a href="new_snippet.php" class="btn btn-outline-neon"><i class="fa fa-plus"></i> New Snippet</a>
-            <a href="profile.php" class="btn btn-outline-neon ms-2"><i class="fa fa-user"></i>Profile</a>
+            <a href="new_snippet.php" class="btn btn-outline-dark text-light"><i class="fa fa-plus"></i> New Snippet</a>
+            <a href="profile.php" class="btn btn-outline-dark text-light ms-2"><i class="fa fa-user"></i>Profile</a>
             <a href="logout.php" class="btn btn-danger btn-outline-danger text-light ms-2"><i class="fa fa-sign-out"></i> Logout</a>
-            <a href="search.php" class="btn btn-outline-neon ms-2"><i class="fa fa-search"></i> Search</a>
+            <a href="search.php" class="btn btn-outline-dark text-light ms-2"><i class="fa fa-search"></i> Search</a>
         </div>
     </nav>
 
@@ -127,7 +127,7 @@ $snippets = $stmt->fetchAll(PDO::FETCH_ASSOC)
                         <p class="terminal-text">> No snippets found. Create your first snippet!</p>
                     <?php else: ?>
                         <?php foreach ($snippets as $snippet): ?>
-                            <div class="snippet-card boder border-2 container-fluid  py-4 mt-3">
+                            <div class="snippet-card border border-2 border-success container-fluid  py-4 mt-3">
                                 <h3 class="snippet-title">&lt;/&gt; <?php echo htmlspecialchars($snippet['title']); ?></h3>
                                 <p class="snippet-desc">📌 <?php echo nl2br(htmlspecialchars($snippet['description'])); ?></p>
                                 <p class="snippet-date">🕒 Created: <?php echo $snippet['created_at']; ?></p>
@@ -136,17 +136,17 @@ $snippets = $stmt->fetchAll(PDO::FETCH_ASSOC)
                                 
             <form action="view_snippet.php" method="POST">
                 <input type="hidden" name="snippet_id" value="<?php echo $snippet['id']; ?>">
-                <button type="submit" class="btn btn-outline-neon">View</button>
+                <button type="submit" class="btn btn-outline-success ms-2">View</button>
             </form>
 
             <form action="edit_snippet.php" method="POST">
                 <input type="hidden" name="snippet_id" value="<?php echo $snippet['id']; ?>">
-                <button type="submit" class="btn btn-outline-neon">Edit</button>
+                <button type="submit" class="btn btn-outline-success ms-2">Edit</button>
             </form>
 
            
 
-            <button class="btn btn-outline-neon delete-btn" data-id="<?php echo $snippet['id']; ?>">Delete</button>
+            <button class="btn btn-outline-success ms-2 delete-btn" data-id="<?php echo $snippet['id']; ?>">Delete</button>
 
         </div>
 
