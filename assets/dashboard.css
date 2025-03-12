@@ -73,8 +73,3 @@ body.hacker-theme {
 }
 
 
-.container-fluid{
-    width:95% !important;
-    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3); /* Green neon glow */
-    border-radius: 10px; /* Slightly rounded corners */
-}

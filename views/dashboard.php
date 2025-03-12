@@ -58,7 +58,7 @@ $snippets = $stmt->fetchAll(PDO::FETCH_ASSOC)
     }
 
     .terminal {
-        white-space: pre-wrap;
+        /* white-space: pre-wrap; */
         word-wrap: break-word;
         overflow-x: auto;
     }
@@ -100,7 +100,7 @@ $snippets = $stmt->fetchAll(PDO::FETCH_ASSOC)
         </div>
     </nav>
 
-    <div class="container-fluid mt-5 border border-radius border-2 py-2 border-success">
+    <div class="container-fluid mt-5  py-2 ">
     <div class="d-flex justify-content-start gap-2 mb-3">
     <div class="circle bg-danger"></div>
     <div class="circle bg-warning"></div>

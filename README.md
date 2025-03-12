@@ -32,7 +32,7 @@ SnipHub is a **basic yet powerful** web app designed to store and manage code sn
 ## 🏗 Installation Guide
 1. Clone the repo:
    ```sh
-   git clone https://github.com/yourusername/snipHub.git
+   git clone https://github.com/tejHacks/snipHub.git
    ```
 2. Navigate into the project:
    ```sh
